@@ -1,0 +1,121 @@
+@CHARSET "UTF-8";
+
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css); 
+.hanna { font-family: 'hanna'; } 
+
+*{
+	list-style:none; 
+	font-family: 'hanna';
+	text-decoration:none;
+}
+
+article{
+	margin-top: 5%;
+	margin-left: 25%;
+	line-height: 150%;
+}
+
+
+article h1{
+font-size: 30px; color: #4e4e4e; margin: 20px 0;
+font-weight: normal;
+}
+
+table{
+	padding: 1px;
+	font-size: 25px;
+}
+#title{
+	float:left;
+	padding-left: 70px;
+}
+
+#title2{
+	font-size: 30px;
+	float:left;
+	padding: .8em 0 .5em 3em;
+
+}
+
+
+
+#content{
+/* 	border-radius:10px;
+	border: 0.1px solid #a9a9a9; */
+	padding: .8em .5em;
+	font-size: 25px;
+}
+
+tr{
+	font-size: 20px;
+	padding: .8em .5em;
+}
+
+
+.btn{
+
+padding: 2px;margin: 0 0 0 5px;
+width: 100px;height: 37px;border: 0.1px solid #999;
+border-radius:10px;
+background-color: #FAF4C0;
+font-size: 15px;
+}
+
+/*notice delete*/
+#noticed td{
+	font-size: 24px;
+}
+#noticed input{
+	height: 15px; width: 200px;
+border-radius:10px;
+border: 0.1px solid #a9a9a9;
+font-size: 17px;
+padding: .8em .5em;
+}
+
+/*bookmark delete*/
+#markd td{
+	font-size: 24px;
+}
+#markd input{
+	height: 15px; width: 200px;
+border-radius:10px;
+border: 0.1px solid #a9a9a9;
+font-size: 17px;
+padding: .8em .5em;
+}
+
+/*question delete*/
+#questiond td{
+	font-size: 24px;
+}
+#questiond input{
+	height: 15px; width: 200px;
+border-radius:10px;
+border: 0.1px solid #a9a9a9;
+font-size: 17px;
+padding: .8em .5em;
+}
+
+/*event delete*/
+#eventd td{
+	font-size: 24px;
+}
+#evnetd input{
+	height: 15px; width: 200px;
+border-radius:10px;
+border: 0.1px solid #a9a9a9;
+font-size: 17px;
+padding: .8em .5em;
+}
+
+
+
+/*comment*/
+.btn2{
+padding: 2px;margin: 0 0 0 5px;
+width: 80px;height: 30px;border: 0.1px solid #999;
+border-radius:10px;
+background-color: #FAF4C0;
+font-size: 13px;
+}

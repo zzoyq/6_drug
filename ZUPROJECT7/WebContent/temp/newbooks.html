@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>BOOKPAGE | 신간도서</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+<!-- 헤더들어가는 곳 -->
+<div id="wrap_header">
+<header>
+<div id="menu">
+<%
+		
+			String id = (String)session.getAttribute("id");
+			
+			if(id == null){
+				//로그인이 되지 않는 화면 나타내기
+		%>		
+				<div id="login">
+					<button type="button" onclick="location.href='${pageContext.request.contextPath}/member/login.jsp'">로그인</button>&nbsp;
+					<button type="button" onclick="location.href='${pageContext.request.contextPath}/member/join.jsp'">회원가입</button>
+				</div>
+		<%
+			}else{
+		%>		
+				<div id="login">
+					<%=id%>님 로그인
+					<a href="${pageContext.request.contextPath}/member/logout.jsp">logout</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+					<a href="${pageContext.request.contextPath}/member/myinfo.jsp">회원정보</a>
+				</div>
+				
+		<%		
+			}
+		%>
+		
+		
+	<div id="header_wrap">
+		
+		<div id="logo">
+			<img alt="BOOKPAGE" src="${pageContext.request.contextPath}/images/mainlogo.gif" width="300" height="100" onclick="location.href='${pageContext.request.contextPath}/index.jsp'">
+		</div>
+		<!-- 검색 -->
+	<form action="#" method="get">
+		<div id="search_form">
+			<input type="text" name="searchBox" id="searchBox"  />
+			<input type="image" name="searchBtn" id="searchBtn" src="${pageContext.request.contextPath}/images/search_btn.gif" alt="검색"  width="40" height="40" />
+		</div>
+	</form>
+		<nav id="top_menu">
+			<ul>
+				<li><a href="${pageContext.request.contextPath}/index.jsp">북페이지 홈</a></li>
+				<li><a href="${pageContext.request.contextPath}/notice/notice.jsp">공지사항</a></li>
+				<li><a href="${pageContext.request.contextPath}/event/event.jsp">이벤트</a></li>
+			</ul>
+		</nav>
+		<br>
+		<nav id="sub_menu">
+			<ul>
+				<li><a href="${pageContext.request.contextPath}/new/new.jsp">&nbsp;&nbsp;신간</a></li>
+				<li><a href="${pageContext.request.contextPath}/board/best.jsp">베스트셀러</a></li>
+				<li><a href="${pageContext.request.contextPath}/board/ebook.jsp">전자책</a></li>
+				<li><a href="${pageContext.request.contextPath}/board/audio.jsp">오디오북</a></li>	
+				<li><a href="${pageContext.request.contextPath}/bookmark/bookmark.jsp">공유 북마크</a></li>
+			</ul>
+		</nav>
+		
+		</div>
+		</div>
+		<hr>
+		
+		
+		
+	
+</header>
+</div>
+
+
+
+<!-- 헤더들어가는 곳 -->
+
+
+<!-- 게시판 -->
+						<div class="row">
+		    			<div class="col-md-4 d-flex">
+		    				<div class="book-wrap">
+		    					<div class="img d-flex justify-content-end w-100" style="background-image: url(../images/n1.jpg);">
+		    						<div class="in-text">
+		    							<a href="#" class="icon d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="left" title="Add to cart">
+		    								<span class="flaticon-shopping-cart"></span>
+		    							</a>
+		    							<a href="#" class="icon d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="left" title="Add to Wishlist">
+		    								<span class="flaticon-heart-1"></span>
+		    							</a>
+		    							<a href="#" class="icon d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="left" title="Quick View">
+		    								<span class="flaticon-search"></span>
+		    							</a>
+		    						</div>
+		    					</div>
+		    					<div class="text px-4 py-3 w-100">
+		    						<h2><a href="#">저는 측면이 좀 더 낫습니다만</a></h2>
+		    						<span class="position">하완 지음</span>
+		    					</div>
+		    				</div>
+		    			</div>
+		    			<div class="col-md-4 d-flex">
+		    				<div class="book-wrap">
+		    					<div class="img d-flex justify-content-end w-100" style="background-image: url(../images/n2.jpg);">
+		    						<div class="in-text">
+		    							<a href="#" class="icon d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="left" title="Add to cart">
+		    								<span class="flaticon-shopping-cart"></span>
+		    							</a>
+		    							<a href="#" class="icon d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="left" title="Add to Wishlist">
+		    								<span class="flaticon-heart-1"></span>
+		    							</a>
+		    							<a href="#" class="icon d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="left" title="Quick View">
+		    								<span class="flaticon-search"></span>
+		    							</a>
+		    						</div>
+		    					</div>
+		    					<div class="text px-4 py-3 w-100">
+		    						<h2><a href="#">컬렉터, 역사를 수집하다</a></h2>
+		    						<span class="position">박건호 지음</span>
+		    					</div>
+		    				</div>
+		    			</div>
+		    			<div class="col-md-4 d-flex">
+		    						<div class="book-wrap">
+		    					<div class="img d-flex justify-content-end w-100" style="background-image: url(../images/n3.jpg);">
+		    						<div class="in-text">
+		    							<a href="#" class="icon d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="left" title="Add to cart">
+		    								<span class="flaticon-shopping-cart"></span>
+		    							</a>
+		    							<a href="#" class="icon d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="left" title="Add to Wishlist">
+		    								<span class="flaticon-heart-1"></span>
+		    							</a>
+		    							<a href="#" class="icon d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="left" title="Quick View">
+		    								<span class="flaticon-search"></span>
+		    							</a>
+		    						</div>
+		    					</div>
+		    					<div class="text px-4 py-3 w-100">
+		    						<h2><a href="#">조각들 </a></h2>
+		    						<span class="position">미나토 가나에 지음</span>
+		    					</div>
+		    				</div>
+		    			</div>
+
+		    			<div class="col-md-4 d-flex">
+		    						<div class="book-wrap">
+		    					<div class="img d-flex justify-content-end w-100" style="background-image: url(../images/n4.jpg);">
+		    						<div class="in-text">
+		    							<a href="#" class="icon d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="left" title="Add to cart">
+		    								<span class="flaticon-shopping-cart"></span>
+		    							</a>
+		    							<a href="#" class="icon d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="left" title="Add to Wishlist">
+		    								<span class="flaticon-heart-1"></span>
+		    							</a>
+		    							<a href="#" class="icon d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="left" title="Quick View">
+		    								<span class="flaticon-search"></span>
+		    							</a>
+		    						</div>
+		    					</div>
+		    					<div class="text px-4 py-3 w-100">
+		    						<h2><a href="#">미남의 운전교실 </a></h2>
+		    						<span class="position">현상철 지음</span>
+		    					</div>
+		    				</div>
+		    			</div>
+		    			<div class="col-md-4 d-flex">
+		    						<div class="book-wrap">
+		    					<div class="img d-flex justify-content-end w-100" style="background-image: url(../images/n5.jpg);">
+		    						<div class="in-text">
+		    							<a href="#" class="icon d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="left" title="Add to cart">
+		    								<span class="flaticon-shopping-cart"></span>
+		    							</a>
+		    							<a href="#" class="icon d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="left" title="Add to Wishlist">
+		    								<span class="flaticon-heart-1"></span>
+		    							</a>
+		    							<a href="#" class="icon d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="left" title="Quick View">
+		    								<span class="flaticon-search"></span>
+		    							</a>
+		    						</div>
+		    					</div>
+		    					<div class="text px-4 py-3 w-100">
+		    						<h2><a href="#">대집사 고양이 상담소 </a></h2>
+		    						<span class="position">나응식/양이삭 지음</span>
+		    					</div>
+		    				</div>
+		    			</div>
+		    			<div class="col-md-4 d-flex">
+		    						<div class="book-wrap">
+		    					<div class="img d-flex justify-content-end w-100" style="background-image: url(../images/n6.jpg);">
+		    						<div class="in-text">
+		    							<a href="#" class="icon d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="left" title="Add to cart">
+		    								<span class="flaticon-shopping-cart"></span>
+		    							</a>
+		    							<a href="#" class="icon d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="left" title="Add to Wishlist">
+		    								<span class="flaticon-heart-1"></span>
+		    							</a>
+		    							<a href="#" class="icon d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="left" title="Quick View">
+		    								<span class="flaticon-search"></span>
+		    							</a>
+		    						</div>
+		    					</div>
+		    					<div class="text px-4 py-3 w-100">
+		    						<h2><a href="#">빅체인지 코로나19 이후 미래 시나리오</a></h2>
+		    						<span class="position">최윤식 지음</span>
+		    					</div>
+		    				</div>
+		    			</div>
+						</div>
+<!-- 게시판  -->		  
+<!-- 푸터 -->
+
+<!-- 푸터 -->
+
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/main.js"></script>
+    
+  </body>
+</html>

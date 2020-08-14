@@ -1,0 +1,36 @@
+@CHARSET "EUC-KR";
+
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css); 
+.hanna { font-family: 'hanna'; } 
+
+*{
+font-family: 'hanna';
+clear:both;
+}
+
+a{
+	font-size: 1.2em;
+}
+
+footer{
+	clear:both;
+	background-color:#f1f1f1;
+}
+
+
+#question,#contact{
+	clear:both;
+	color:black;
+	margin: 0 45px;
+}
+
+div a:hover{
+	text-decoration: underline;
+}
+
+div p{
+	float:left;
+	margin: 0 40px;
+	padding: 5px;
+}
+

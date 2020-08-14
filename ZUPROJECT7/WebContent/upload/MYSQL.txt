@@ -1,0 +1,238 @@
+윈도우+R => cmd
+
+MYSQL 로그인 
+> mysql -u[계정명] -p[비밀번호] -h[서버주소] [DB명]
+
+> mysql -u root -p
+Enter password: 1234
+
+mysql>
+
+* mysql 기본설정 정보 확인
+> status
+
+* DB 목록확인
+> show databases;
+* DB 생성
+> create database [DB명];
+> create database javadb;
+* DB 삭제
+> drop database [DB명];
+> drop database javadb;
+* DB 선택
+> use [DB명];
+> use javadb;
+> status
+
+----------------------------
+* 테이블 생성
+
+- 테이블 조회 : show tables;
+- 테이블 생성 :
+  create table [테이블명](
+    필드명1 데이터타입 제약조건,
+    필드명2 데이터타입 제약조건,
+    필드명3 데이터타입 제약조건
+  );
+
+오라클 -> mysql
+문자 : varchar2 -> varchar
+숫자 : number -> int 
+- 테이블 삭제 : drop table [테이블명];
+- 테이블 구조 : desc [테이블명];
+
+----------------------------
+ex1)
+테이블 명 : test
+필드 : idx (정수형)
+
+> create table test(
+   idx INT
+);
+
+> show tables;
+> desc test;
+
+ex2)
+ 테이블명 : test2
+ 필드(2개) : idx (정수형),
+      d_num (실수형double)
+
+> create table test2(
+    idx int,
+    d_num double
+ );
+
+ex3)
+ 테이블명 : test3
+ 필드(3개) : idx(정수형),
+    name(문자 10개),
+    jumin(문자 14개)
+
+> create table test3(
+   idx INT,
+   name VARCHAR(10),
+   jumin VARCHAR(14)
+);
+
+----------------------------
+ 데이터 삽입,삭제,검색
+
+- 삽입 : 
+  insert into [테이블명] {(필드명1,필드명2,...)} values (데이터1,데이터2,...);
+* 필드명(컬럼명) 생략시 컬럼 순서대로 모두 입력
+- 삭제 : 
+  delete from [테이블명] {WHERE 조건};
+- 검색 : 
+  select [컬럼명, *] from [테이블명] {WHERE 조건};
+
+ex)
+test 테이블에 필드 데이터 1,2 추가
+> insert into test(idx) values(1);
+> insert into test values(2);
+> select * from test;
+
+test 테이블에 있는 데이터 모두 삭제
+> delete from test;
+
+test3 테이블에 데이터 추가
+1번 : 1, Lee, 900101-1234567
+2번 : 2, Kang, 900202-1234567
+3번 : 3, Hong
+4번 :    Kim, 900303-1234567
+
+> insert into test3 values(1,'Lee','900101-1234567');
+> insert into test3 values(2,'Kang','900202-1234567');
+> insert into test3(idx,name) values(3,'Lee');
+>
+insert into test3(name,jumin) values('Lee','900303-1234567');
+
+ex) test4 테이블
+   idx(정수형) =>PK 제약조건
+   name(문자 10개)
+
+> create table test4(
+   idx INT PRIMARY KEY,
+   name VARCHAR(10)
+);
+
+
+ 1번 인덱스에 'Lee' 정보 저장
+> insert into test4 values (1,'Lee');
+ 1번 인덱스에 'kang' 정보를 저장
+> insert into test4 values (1,'Kang');
+=> idx 필드의 값이 PK이기 때문에
+  데이터 중복을 허용하지 않는다.(=UNIQUE 제약조건)
+
+> insert into test4(name) values ('Kim');
+=> PK 제약조건으로 데이터 값이 Null올수 없음.
+  (=NOTNULL 제약조건)
+
+ex) 시간정보
+create table test5(
+   idx INT PRIMARY KEY AUTO_INCREMENT,
+   datetime DATETIME,
+   timestamp TIMESTAMP,
+   date DATE
+);
+
+> insert into test5 
+  values(1,'2020-06-05 14:37:00','2020-06-05 14:37:00','2020-06-05 14:37:00');
+
+> insert into test5 
+  values(null,null,null,null);
+
+> insert into test5 
+  values(null,now(),now(),now());
+=> now() : 현재 DB의 시간정보를 불러옴
+
+ex) tbl_member, itwill_member
+itwill_member 테이블
+번호 : idx ( 정수형 ), PK, AI
+이름 : name( 문자 20개 )
+성별 : gender ( 문자 2개 )
+나이 : age ( 정수형 )
+주민번호 : jumin ( 문자 14개 )
+---------------------------------------
+1  'hong'  M  16  '900101-1231231'
+2  'Lee'   M  25  '900202-1231231'
+3  'Kim'   W  20  '900303-1231231'
+4  'Kang'     19  '900404-1231231'
+5  'Song'  W  26  
+
+create table itwill_member(
+   idx INT AUTO_INCREMENT PRIMARY KEY,
+   name VARCHAR(20),
+   gender VARCHAR(2),
+   age INT,
+   jumin VARCHAR(14)
+);
+
+insert into itwill_member 
+values(1,'hong', 'M' , 16 , '900101-1231231');
+insert into itwill_member 
+values(2, 'Lee',  'M' , 25,  '900202-1231231');
+insert into itwill_member 
+values(3, 'Kim',  'W',  20,  '900303-1231231');
+insert into itwill_member 
+values(4 , 'Kang', null  ,19,  '900404-1231231');
+insert into itwill_member 
+values(5,  'Song',  'W',  26 ,null );
+ 
+--------------------------------------
+ WHERE 조건절
+itwill_member 테이블
+ex) idx 필드의 값이 3 이상인 사람의 정보 조회
+
+> select * from itwill_member 
+  where idx >= 3;
+
+ex) 이름 정보가 'Kang'인 사람의 정보만 조회
+
+> select * from itwill_member 
+  where name ='Kang';
+
+ex) 성별이 남(M) 이면서 나이가 20살 이상인 사람
+    정보 조회
+> select * from itwill_member 
+  where gender='M' AND age >= 20;
+
+ex) 성별이 여(W) 이거나, 나이가 20살 이하인 사람의 정보
+> select * from itwill_member 
+  where gender='W' OR age <= 20;
+
+ex) 회원의 이름, 주민번호만 출력 
+
+> select name,jumin from itwill_member;
+
+=> '이름','주민번호' 필드명을 변경후 모든정보 출력
+
+> select name as '이름',jumin as '주민번호' from itwill_member;
+
+ex) idx번호가 4번인 사람의 정보를 삭제
+> delete from itwill_member 
+  where idx = 4;
+
+
+=> UPDATE 구문
+ UPDATE [테이블명] set 필드명=데이터,... {WHERE 조건};
+
+ex) idx 번호가 5번인 사람의 주민번호를 추가
+  '900505-1231234'
+
+> update itwill_member set jumin='900505-1231234' where idx = 5;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

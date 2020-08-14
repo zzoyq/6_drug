@@ -1,0 +1,245 @@
+
+public class Test1 {
+
+	public static void main(String[] args){
+		
+		// 식별자 규칙 사용하기
+		// =>변수의 이름 지정
+		// 1. 영문자, 숫자 조합으로 사용
+		// 2. 반드시 첫글자는 영문자(_,$는 사용가능)
+		// 3. 동일한 이름 사용불가
+		// 4. 대소문자 구분
+		// 5. 예약어를 사용할 수 없음.
+		
+		// * 클래스명은 반드시 첫글자 영어 대문자로 사용
+		
+		
+		// 변수 : 데이터를 저장하는 공간
+		// -> 공간마다 저장할 수 있는 데이터 타입이 다르다
+		
+		// 변수 선언
+		//int Lotto_number;          (_언더바는 띄어쓰기 대체야)
+		//int LottoNumber;           (이건 카멜표기법이야)
+		//int LottoNUMBER;           (대문자를 쓰면 다른걸로 인지해)
+		//[데이터 타입] [변수명];
+		//*동일한 이름의 변수명 사용 불가
+		
+		// int public;
+		// =>예약어를 사용할 수 없다.
+		
+		// * 데이터 타입
+		// 1. 기본형 데이터 타입(8가지)     (8가지 외워야 된대)
+		// 논리형 - boolean  - 1byte
+		// 문자형 - char - 2byte
+		// 정수형 - byte, short, int, long
+		//          1      2     4    8
+		// 실수형 - float, double
+		//          4      8
+		// 2. 참조형 데이터 타입
+		// 기본형 데이터타입 8개를 제외한 모든 타입
+		
+		
+		
+		
+	}
+	
+	
+	
+}
+------------------------------------------------------------------------
+
+
+public class Test2 {
+
+	public static void main(String[] args) {
+		// 기본형타입 8가지 출력
+		System.out.println("논리형-boolean-1byte");
+		System.out.println("문자형-char-2byte");
+		System.out.println("정수형-byte-1byte");
+		System.out.println("정수형-short-2byte");
+		System.out.println("정수형-int-4byte");
+		System.out.println("정수형-long-8byte");
+		System.out.println("실수형-float-4byte");
+		System.out.println("실수형-double-8byte");
+		
+		
+		// 논리형 데이터 타입 - boolean
+
+		// 논리형 타입의 변수 TRUE 생성
+		// -> 참,거짓을 표현하는 데이터 타입. 소문자 true,false 사용
+		//  TRUE,FALSE(x) 0,1(x)
+		boolean TRUE = true;
+		
+		System.out.println("TRUE변수에 들어있는 값 : "+TRUE);
+		
+		boolean FALSE = false;
+		
+		System.out.println("FALSE 변수에 들어 있는값 : "+FALSE);
+		
+		
+		// 문자형 데이터타입 - char 
+		//=> 반드시 하나의 문자만 저장 가능 (16비트 유니코드사용)
+		// *char형은 기본적으로 정수형에 속한다. => 문자를 정수로 표현이 가능
+		// ' ' 사용하여 표현한다.
+		
+		char charValue = 'a';
+		System.out.println("문자형 데이터 값 : "+charValue);
+		
+		char charValue2 = 65;
+		System.out.println("문자형 데이터 값 : "+charValue2);
+		
+		char charValue3 = 'a'+10;
+		System.out.println("문자형 데이터 값 : "+charValue3);
+		
+		// 정수형 데이터타입 - byte(-128~127),short(-32000~32000),int,long
+		// -> 소수점이 없는 정수를 표현하는 데이터 타입(2/8/10/16진수 표현 가능)
+		// * int타입이 정수형타입의 기본형
+		// * long 타입데이터는 숫자 끝에 L/l 추가 
+		
+		//byte byteNum = -129;
+		// -> 데이터타입의 범위를 벗어난경우 항상 기본형타입으로 처리 (int)
+		//System.out.println("byte타입의 값 : "+byteNum);
+		short shortNum;
+		int intNum = 1000000000;
+		long longNum = 10000000000l;
+		
+		// 실수형 데이터 타입 - float, double
+		// -> 소수점 이하가 있는 데이터타입
+		//  double타입이 기본형 타입
+		// float타입의 데이터값은 f,F를 붙여서 사용
+		// double 타입 데이터값에 d,D를 붙여서 사용(생략가능)
+		
+		float floatNum = 3.1111111111111111f;
+		double doubleNum = 3.111111111111111111111111111111111111d;
+		
+		
+	System.out.println("--------------------------------------");
+	
+	System.out.println("문자열 리터럴 (유니코드 사용)");
+	// https://www.unicode.org/charts/PDF/UAC00.pdf
+	// -> 한글 유니코드값 문서
+	char chValue='\uAC00';
+	System.out.println("값 : "+chValue);
+	
+	// \n 줄바꿈  \t 여백 생성(tab) 
+	System.out.println("안녕하세요 \n 자바시간\t입니다.");
+	
+//    char chValue2='\\';
+//    char chValue2='\'';
+    char chValue2='\"';
+    System.out.println("이스케이프 문자 사용 : "+chValue2);
+    
+    // 자바 설치 경로를 찾아서 출력하시오.
+    //C:\Program Files\Java\jdk1.8.0_121\bin\java.exe
+    System.out.println("C:\\Program Files\\Java\\jdk1.8.0_121\\bin\\java.exe");
+    
+	// 정수형 리터럴
+    //234 (10진수) / 030(8진수) / 0xA4 (16진수) / 0b1010 (2진수)
+	
+	
+    // 상수 : 값을 변경하지 못하는 변수
+    // 선언
+    // final [타입] [상수명] = 초기값;
+    // char,int,double 상수 생성
+    
+    final char CH = 'b';
+    // CH = 'g'; (x)
+    
+    final int IN = 100;
+    final double DOU = 1.2345;
+    
+    // 변수의 사용
+    // 1.변수를 선언
+    // 2. 변수를 초기화
+    // 3. 변수를 사용(값을 변경)
+    
+    int num = 100;
+    // 1. 변수의 선언
+    // int num;
+    // 2. 변수를 초기화
+    // num =100; 
+    // 1.2. 변수의 선언과 초기화를 동시에 사용
+    // int num = 100;
+    // 3. 사용
+    // -> 변수의 이름을 호출한다 (사용한다)
+    System.out.println(num);
+    // 3-1. 재사용
+    num = 200;
+    
+    //int a;
+    //System.out.println(a);
+    //* 참조형 변수 - String/ "값" / 저장공간 4byte
+    
+    
+    //                                / 기본형타입 형전환
+    // 데이터 타입 전환(형전환)
+    //                                \ 참조형타입 형전환
+    
+    // *기본형 타입 형전환
+    // 1. 묵시적 형전환(자동 형전환)
+    //  : 필요한 메모리의 크기가 작은 데이터 타입에서 큰 데이터 타입으로 이동할때 발생
+    
+    byte b = 10;
+    int i = b; // 묵시적 형전환 발생(byte(1) -> int(4))
+    
+    // 2. 명시적 형전환(강제 형전환)
+    //   : 필요한 메모리의 크기가 큰곳에서 작은곳으로 이동할때 발생
+    
+    int i2 = 10;
+    byte b2 = (byte)i2;
+    
+    
+    // 연산시 데이터 형변환
+    // => 기본형 타입의 데이터보다 적은 메모리를 사용하는 타입의 경우
+    // 연산시 메모리 오버플로우(넘침)로 인한 계산 오류가 발생할 수 있음
+    //그래서 기본형타입 int로 바꿔서 처리 한다.
+    // => 형변환은 연산이 끝난후에 처리 해야함.
+    
+    
+    short s1 = 10;
+    short s2 = 20;
+    //short s3 = s1 + s2;  // int 기본형
+    //short s3 = (short)s1 + (short)s2;  // int 기본형 (x)
+    //short s3 = (short)(s1 + s2);  // int 기본형 (o)
+    int s3 = s1 + s2; // int 기본형
+    
+    
+    
+    int a = 8 / 3;
+    System.out.println(a);
+    
+    //-> 2.6666666
+    double d = 8 / 3;
+    // =>정수형 / 정수형 => 정수형  //2.0 나옴
+    System.out.println(d);
+    
+    double cd = 8.0 / (double)3;
+    System.out.println(cd);
+    // =>실수형 / 실수형 => 실수형   //2.666666666666 나옴
+
+    
+    System.out.println(12345+5432l);  //66666이 아니라 17777인데, 이유는 1 아니고 l이다. long타입.
+
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

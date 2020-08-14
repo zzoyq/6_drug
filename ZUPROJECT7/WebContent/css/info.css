@@ -1,0 +1,70 @@
+@CHARSET "EUC-KR";
+
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css); 
+.hanna { font-family: 'hanna'; } 
+
+*{
+	list-style:none; 
+	font-family: 'hanna';
+	text-decoration:none;
+}
+
+article{float: left; 
+padding-left: 400px;
+font-size: 20px;line-height: 1.5em}
+/*정렬 오른쪽 너비 660px 안오른쪽여백 30px 
+줄간격1.5em */
+
+article h1{
+font-size: 25px; color: #4e4e4e; margin: 20px 0;
+font-weight: normal;
+}/* 글자크기 45px
+글자색 #CCC 밖여백20px 0  글자굵기 normal*/
+
+.btn{
+padding: 2px;margin: 0 0 0 5px;
+width: 100px;height: 37px;border: 0.1px solid #999;
+border-radius:10px;
+background-color: #FAF4C0;
+font-size: 15px;
+}
+
+#myinfo{
+	margin-top :40px;
+	margin-bottom : 40px;
+	
+/* 	border-top: 1px;
+	border-right: 1px;
+	border-bottom: 1px; */
+}
+
+#info{
+	background-color: #efefef;
+	width: 150px;
+	padding : 0.5em;
+	text-align: right;
+}
+
+#passwd, #phone, #email, #address, #address2{
+	font-size: 18px;
+	padding : 0.5em;
+	border-radius:8px;
+	border: 0.1px solid #999;
+}
+
+#name, #id, #age{
+	font-size: 18px;
+	padding : 0.5em;
+	border: 0px;
+}
+
+
+/* 
+.reee{
+font-size:20px;
+float: left; 
+padding-left: 400px;
+font-size: 1.5em;line-height: 1.5em}
+정렬 오른쪽 너비 660px 안오른쪽여백 30px 
+줄간격1.5em
+} */
