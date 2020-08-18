@@ -17,17 +17,18 @@
 	</div>	
 
 	<div id="top_menu">
-		<a href="#">로그인</a>&nbsp;&nbsp;&nbsp;
-		<a href="#">회원가입</a>
+		<a href="${pageContext.request.contextPath}/member/login.jsp">로그인</a>&nbsp;&nbsp;&nbsp;
+		<a href="${pageContext.request.contextPath}/member/join.jsp"">회원가입</a>&nbsp;&nbsp;&nbsp;
+		<a href="${pageContext.request.contextPath}/member/mypage.jsp">마이페이지</a>
 	</div>
 	
 	<!-- 메뉴 -->
 	<nav>
 	 <ul>		  
-	  <li><a href="#">메뉴1</a></li>
-	  <li><a href="#">메뉴2</a></li>
-	  <li><a href="#">메뉴3</a></li>
-	  <li><a href="#">메뉴4</a></li>
+	  <li><a href="#">약복용</a></li>
+	  <li><a href="#">약검색</a></li>
+	  <li><a href="#">약국찾기</a></li>
+	  <li><a href="#">커뮤니티</a></li>
 	 </ul>
 	</nav>
 	
