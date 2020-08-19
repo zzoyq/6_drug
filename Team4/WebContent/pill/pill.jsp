@@ -8,11 +8,7 @@
 <link href="../css/main.css" rel="stylesheet" type="text/css">
 <link href="../css/header.css" rel="stylesheet" type="text/css">
 <link href="../css/footer.css" rel="stylesheet" type="text/css">
-
-<style type="text/css">
-	tr.hide {display:none}
-</style>
-
+<link href="../css/pill.css" rel="stylesheet" type="text/css">
 
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">

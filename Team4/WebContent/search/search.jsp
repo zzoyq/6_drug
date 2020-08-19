@@ -8,45 +8,7 @@
 <link href="../css/main.css" rel="stylesheet" type="text/css">
 <link href="../css/header.css" rel="stylesheet" type="text/css">
 <link href="../css/footer.css" rel="stylesheet" type="text/css">
-
-<style type="text/css">
-	body{
-		margin-top: 100px;
-		line-height: 1.6
-	}
-	.container{
-		width: 900px;
-		margin: 0 auto;
-	}
-
-	ul.tabs{
-		margin: 0px;
-		padding: 0px;
-		list-style: none;
-	}
-	ul.tabs li{
-		background: none;
-		color: #222;
-		display: inline-block;
-		padding: 10px 15px;
-		cursor: pointer;
-	}
-	
-	ul.tabs li.current{
-		background: #ededed;
-		color: #222;
-	}
-	
-	.tab-content{
-		display: none;
-		background: #ededed;
-		padding: 15px;
-	}
-	
-	.tab-content.current{
-		display: inherit;
-	}
-</style>
+<link href="../css/search.css" rel="stylesheet" type="text/css">
 
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">

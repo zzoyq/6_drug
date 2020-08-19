@@ -10,7 +10,7 @@
 
 <body>
 		<div id="pill">
-		 <a href="${pageContext.request.contextPath}/fill/fill.jsp">
+		 <a href="${pageContext.request.contextPath}/pill/pill.jsp">
 		  <img src="${pageContext.request.contextPath}/images/pill.jpg" width="300">
 		 </a>
 		 <p><br>약복용</p>

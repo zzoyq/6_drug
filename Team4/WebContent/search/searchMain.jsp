@@ -8,10 +8,7 @@
 <link href="../css/main.css" rel="stylesheet" type="text/css">
 <link href="../css/header.css" rel="stylesheet" type="text/css">
 <link href="../css/footer.css" rel="stylesheet" type="text/css">
-
-<style>
-div {display:inline-block;}
-</style>
+<link href="../css/searchMain.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
