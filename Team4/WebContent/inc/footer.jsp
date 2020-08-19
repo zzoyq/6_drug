@@ -18,8 +18,6 @@
 		Copyright ⓒ 2020- YAKBBAL. All rights reserved<br><br>
 		<span><a href="#">고객지원| CUSTOMER SUPPORT</a></span>	
 	</p>
-
-
  </footer> 
 
 </body>

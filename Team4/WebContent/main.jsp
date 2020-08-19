@@ -10,14 +10,14 @@
 
 <body>
 		<div id="pill">
-		 <a href="${pageContext.request.contextPath}/index.jsp">
+		 <a href="${pageContext.request.contextPath}/fill/fill.jsp">
 		  <img src="${pageContext.request.contextPath}/images/pill.jpg" width="300">
 		 </a>
 		 <p><br>약복용</p>
 		</div>	
 	
 		<div id="search">
-		 <a href="${pageContext.request.contextPath}/index.jsp">
+		 <a href="${pageContext.request.contextPath}/search/searchMain.jsp">
 		  <img src="${pageContext.request.contextPath}/images/search.jpg" width="300">
 		 </a>
 		  <p><br>검색</p>

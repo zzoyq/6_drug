@@ -10,7 +10,7 @@ header{
 	height: 200px;
 	position: relative;
 	background-color: #f6f6f6;
-	background-color: rgba( 255, 255, 255, 0.1 );
+	background-color: rgba( 255, 255, 255, 0.5 );
 }
 
 #logo img{

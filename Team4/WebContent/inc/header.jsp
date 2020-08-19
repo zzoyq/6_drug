@@ -25,8 +25,8 @@
 	<!-- 메뉴 -->
 	<nav>
 	 <ul>		  
-	  <li><a href="#">약복용</a></li>
-	  <li><a href="#">약검색</a></li>
+	  <li><a href="${pageContext.request.contextPath}/fill/fill.jsp">약복용</a></li>
+	  <li><a href="${pageContext.request.contextPath}/search/searchMain.jsp">약검색</a></li>
 	  <li><a href="#">약국찾기</a></li>
 	  <li><a href="#">커뮤니티</a></li>
 	 </ul>
